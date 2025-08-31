@@ -16,7 +16,7 @@ main {
     flex: 1;
 }
 
-.Create-Profile-continer {
+.create-profile-continer {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -48,4 +48,5 @@ main {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+
 }
