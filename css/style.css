@@ -1,10 +1,12 @@
 body {
-    background-color: #f4f9f6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    gap: 30px;
+  background-color: #f4f9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 30px;
+  font-family: sans-serif;
 }
+
 
 * {
     box-sizing: border-box;
@@ -123,8 +125,7 @@ main {
 
 .card {
     height: 300px;
-    width: 90%;
-    max-width: 300px;
+    /* max-width: 300px; */
     background-color: #f8f9fa;
     border-radius: 20px;
     box-shadow: 0 5px 15px thistle ;
@@ -346,11 +347,6 @@ footer {
 
 
 
-
-
-
-
-
 aside {
     margin: 5% 0 0 1%;
     height: 100%;
@@ -358,3 +354,159 @@ aside {
     display: flex;
     flex-flow: column;
 }
+
+/* @media (max-width: 1200px)  {
+    .container {
+        flex-flow: column;
+        place-items: center;
+        .card {
+            width: 300px;
+        }
+    }
+} */
+
+
+
+
+@media (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+
+@media (max-width: 1199px) {
+  .header_nav {
+    gap: 1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .footer-content {
+    justify-content: space-around;
+  }
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  .header_nav {
+    display: none; /* تخفي الناف العريض */
+  }
+
+  .Sing_button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* كرت واحد في الصف */
+  }
+
+  .begin_container h1 {
+    font-size: clamp(20px, 4vw, 36px);
+  }
+
+  .begin_container p {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+  .header_container {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo_text {
+    font-size: 1.8rem;
+  }
+
+  .user_profile {
+    width: 40px;
+    height: 40px;
+  }
+
+  .begin_container {
+    padding: 100px 20px 40px;
+  }
+
+  .begin_container h1 {
+    font-size: 28px;
+  }
+
+  .end_container {
+    width: 95%;
+    margin: 2rem auto;
+    padding: 20px;
+    height: auto;
+  }
+
+  .end_container h2 {
+    font-size: 22px;
+  }
+
+  .end_container a {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .logo_text {
+    font-size: 1.5rem;
+  }
+
+  .Sing_button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .notification {
+    width: 22px;
+    height: 22px;
+  }
+
+  .p_image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .p_name, .p_sc {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 1rem 0;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
+
+
